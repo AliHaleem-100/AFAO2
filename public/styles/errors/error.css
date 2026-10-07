@@ -1,0 +1,105 @@
+.error-page {
+  background: #f8fbfb;
+}
+
+.error-section {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.error-card {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+  padding: 60px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.error-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: rgba(0, 128, 128, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-icon i {
+  font-size: 38px;
+  color: var(--primary-color);
+}
+
+.error-code {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.error-card h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.error-card p {
+  max-width: 600px;
+  margin: auto;
+  font-size: var(--text-font-size);
+  line-height: 1.9;
+  color: #475569;
+}
+
+.error-actions {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.error-actions .btn {
+  min-width: 210px;
+}
+
+.error-actions .btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.error-actions .btn-outline:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .error-section {
+    padding: 70px 0;
+  }
+
+  .error-card {
+    padding: 40px 25px;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-actions .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/styles/errors/error.css">
+<main class="error-page">
+    <section class="error-section">
+        <div class="container">
+            <% if(ENV_NODE=="development" ){%>
+                <span>
+                    <%= message %>
+                        <br />
+                        <%= stack %>
+                </span>
+                <%}%>
+                    <div class="error-card">
+                        <div class="error-icon">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <span class="error-code">
+                            <%= statusCode %>
+                        </span>
+                        <h1>
+                            <%= title %>
+                        </h1>
+                        <p>
+                            <%= message %>
+                        </p>
+
+
+                        <div class="error-actions">
+                            <a href="/" class="btn round-btn btn-primary">
+                                <i class="fa-solid fa-house"></i>
+                            </a>
+                            <a href="/contact" class="btn round-btn btn-outline">
+                            </a>
+                        </div>
+                    </div>
+        </div>
+    </section>
+</main>

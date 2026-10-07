@@ -1,0 +1,83 @@
+<head>
+    <link rel="stylesheet" href="/styles/components/header.css">
+</head>
+<header>
+    <div class="top-bar container">
+        <span class="slogan">
+            Empowering People • Strengthening Communities.
+        </span>
+        <div class="header-actions">
+            <a href="/apply" class="apply-link">Apply</a>
+            <!-- <details> keeps the switcher usable with JS disabled; header.js only
+             adds outside-click and Escape dismissal on top of it. -->
+            <details class="lang-switcher" id="langSwitcher">
+                <summary class="lang-toggle">
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-solid fa-angle-down lang-caret"></i>
+                </summary>
+
+                <!-- ! langs options must come from the backend !!! -->
+                <ul class="lang-menu">
+
+                </ul>
+
+            </details>
+        </div>
+    </div>
+    <nav class="navbar container">
+        <a href="/" class="logo">
+            <img src="/images/logo_colorful.webp" alt="all for all logo">
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item" name="home">
+                <a href="/" class="nav-link">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item" hasDropdown name="about">
+                <a href="/about" class="nav-link">
+                    <span>About Us</span>
+                    <i class="fa-solid fa-angle-down lang-caret"></i>
+                </a>
+                <!-- dropdown comes from the javascript -->
+            </li>
+            <li class="nav-item" hasDropdown name="programs">
+                <a href="/programs" class="nav-link">
+                    <span>Programs</span>
+                    <i class="fa-solid fa-angle-down lang-caret"></i>
+                </a>
+            </li>
+            <li class="nav-item" hasDropdown name="volunteer">
+                <a href="/volunteer" class="nav-link">
+                    <span>Volunteer</span>
+                    <i class="fa-solid fa-angle-down lang-caret"></i>
+                </a>
+            </li>
+            <li class="nav-item" name="contact">
+                <a href="/contact" class="nav-link">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        <div class="header-actions active">
+            <button class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="donate-btn btn filled-btn">
+                <a href="/donate">DONATE</a>
+            </button>
+            <!-- hamburger menu -->
+            <button class="nav-menu-btn">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="overlay"></div>
+</header>
+
+
+<script src="/js/header/dropdown-items.js"></script>
+<script src="/js/header/index.js"></script>
+<script src="/js/header/langSwitcher.js"></script>

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: "GENDY";
+  src: url("../../fonts/GENDY.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham_Extra_Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "YakanBold";
+  src: url("/fonts/byakanBold.ttf") format("truetype");
+}
+:root {
+  --primary-color: #2a7d7c;
+  --secondary-color: #12294b;
+  --gray-color: #f9f9f9;
+  --white-color: #ffffff;
+
+  /* font color */
+  --text-color: #12294b;
+  --pale-dark-color: rgba(0, 0, 0, 0.2);
+
+  /* font-size */
+  --super-title-font-size: 48px;
+  --title-font-size: 20px;
+  --text-font-size: 18px;
+  --tiny-font-size: 13px;
+  /* weight */
+  --super-title-font-weight: 600;
+  --title-font-weight: 500;
+  /* line height */
+  --super-title-line-height: 1.05;
+  --text-line-height: 1.8;
+
+  /* space-config */
+  --main-padding: 55px;
+  --title-margin-bottom: 22px;
+  --title-line-margin-bottom: 28px;
+  --logo_size: 150px;
+
+  --gap: 20px;
+
+  /* border radius */
+  --border-radius: 20px;
+
+  /* page height */
+  --section-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: url("/images/background.webp") !important;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px var(--main-padding);
+}
+
+.title {
+  font-family: "Gotham", sans-serif;
+}
+
+.btn {
+  border: 1px solid var(--primary-color);
+  padding: 13px 45px;
+  border-radius: 50px;
+  transition: 0.3s;
+  color: var(--primary-color);
+  font-size: var(--text-font-size);
+}
+
+.filled-btn {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.filled-btn:hover {
+  background-color: #016e6e;
+  transform: translateY(-2px);
+}
+
+.outline-btn {
+  background: rgba(255, 255, 255, 0.75);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.outline-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1200px) {
+  :root {
+    --logo_size: 100px;
+  }
+}
+@media (max-width: 1100px) {
+  :root {
+    --super-title-font-size: 45px;
+    --main-padding: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    /* font-size */
+    --text-font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    /* font-size */
+    --super-title-font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    /* font-size */
+    --super-title-font-size: 25px;
+    --text-font-size: 16px;
+    --logo_size: 100px;
+  }
+}
