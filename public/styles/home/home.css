@@ -7,9 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 1280px;
   height: var(--section-height);
 }
+
 .hero-container::after {
   content: "";
   position: absolute;
@@ -58,20 +58,20 @@
 
 .hero-content .btn {
   margin-top: var(--gap);
-}
-
-.hero-content .btn a {
   text-transform: uppercase;
   color: var(--primary-color);
 }
-.hero-content .btn:hover a {
+
+.hero-content .btn:hover {
   color: var(--white-color);
 }
+
 /* trust bar */
 .trust-bar {
   width: 100%;
   margin: 0 auto;
 }
+
 .trust-container {
   width: 85%;
   background: var(--white-color);
@@ -79,18 +79,20 @@
   padding-block: 25px;
   box-shadow: 1px 1px 10px var(--pale-dark-color);
 }
+
 .trust-container .trust-menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr;
   align-items: center;
   gap: var(--gap);
 }
+
 .trust-menu .trust-item {
   display: flex;
   align-items: center;
   font-size: var(--text-font-size);
-  /* height: 100%; */
 }
+
 .trust-menu .trust-item i {
   display: flex;
   justify-content: center;
@@ -102,16 +104,19 @@
   border-right: 1px solid var(--pale-dark-color);
   font-size: 25px;
 }
+
 .trust-menu .trust-item .content {
   height: 100%;
   padding-left: 5px;
   word-break: keep-all;
 }
+
 .trust-item .content .trust-title {
   font-weight: var(--super-title-font-weight);
   font-size: var(--title-font-size);
   text-wrap: nowrap;
 }
+
 .trust-item .content .trust-subtitle {
   font-size: var(--text-font-size);
 }
@@ -119,41 +124,158 @@
 /* about */
 .about-container {
   width: 100%;
+  display: flex;
+  height: var(--section-height);
+  padding-block: var(--section-padding);
+  gap: var(--gap);
+}
+
+.about-content .content {
+  margin-bottom: var(--gap);
+}
+
+.about-content .about-title {
+  font-size: var(--super-title-font-size);
+  margin-bottom: var(--title-margin-bottom);
+}
+
+.about-content .about-subtitle {
+  font-size: var(--text-font-size);
+  line-height: var(--text-line-height);
+}
+
+.hero-content button.apply-btn {
+  display: none;
+}
+
+.about-content .about-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.about-container img {
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+/* slider */
+.swiper {
   height: var(--section-height);
 }
 
-.about-content {
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media only screen and (max-width: 1200px) {
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1200px) {}
+
 @media only screen and (max-width: 992px) {
+
+  /* hero */
   .hero-content {
     width: 80%;
   }
+
+  /* trust bar */
+  .trust-container {
+    background-color: var(--gray-color);
+  }
+
   .trust-container .trust-menu {
     grid-template-columns: 1fr;
+  }
+
+  /* about */
+  .about-container img {
+    width: 450px;
+    height: 300px;
   }
 }
 
 /* Tablets portrait */
 @media only screen and (max-width: 768px) {
+
+  /* hero */
   .hero-content {
     width: 100%;
   }
+
+  /* trust */
   .trust-bar {
     margin: 0;
   }
+
+  .trust-bar .trust-container {
+    box-shadow: none;
+  }
+
   .trust-container {
     width: 100%;
     border-radius: 0;
+  }
+
+  /* about */
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-container img {
+    width: 100%;
+    height: auto;
   }
 }
 
 /* Mobile phones */
 @media only screen and (max-width: 600px) {
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-content button {
+    width: 100%;
+  }
+
+  .hero-content button.apply-btn {
+    display: block;
+  }
+
+  .hero-content .btn {
+    display: block;
+    width: 100%;
+  }
+
+  /* trust bar */
+
+  /* about */
+  .about-content button {
+    width: 100%;
+  }
+
+  .about-container button .about-btn {
+    text-align: center;
+    display: block;
+  }
 }
 
 /* Small mobile phones */
-@media only screen and (max-width: 480px) {
-}
+@media only screen and (max-width: 480px) {}

@@ -1,35 +1,54 @@
-let heroContainer = document.querySelector(".hero-container");
-let header = document.querySelector("header");
-let headerHeight = header.clientHeight;
+import { containerRes } from "/js/utils/containerRes.js";
+const header = document.querySelector("header")
 
-// avail height is reasonable for this.
-// heroContainer.scrollHeight measure it from the browser height
-// if use dev tool it screwed and overlapped with other elements.
-
+// events
 window.addEventListener("DOMContentLoaded", update);
 window.addEventListener("resize", update);
 
 function update() {
-  trustBarHandler();
-  sectionHeightHandler();
+  hero.contentToCenter()
+  trustBar.update();
+  // containerRes(header);
 }
 
-// trust bar
-function trustBarHandler() {
-  // probably i won't need trust bar outside of of this block.
-  let trustBar = document.querySelector(".trust-bar");
-  if (innerWidth <= 768) {
-    return (trustBar.style.marginTop = 0);
+
+// hero section
+const hero = {
+  heroContent: document.querySelector(".hero-content"),
+
+  contentToCenter() {
+    if (trustBar.mobileMode) return this.heroContent.style.marginTop = `0`
+    this.heroContent.style.marginTop = `-${trustBar.halfHeight}px`
   }
-  trustBar.style.marginTop = `-${trustBar.clientHeight / 2}px`;
 }
 
-function sectionHeightHandler() {
-  if (screen.availHeight < 400 || screen.availHeight > 800) {
-    document.documentElement.style.setProperty("--section-height", "720px");
+// trust bar 
+const trustBar = {
+  item: document.querySelector(".trust-bar"),
+  get mobileMode() { return innerWidth <= 768 ? true : false },
+
+  get halfHeight() { return this.item.clientHeight / 2 },
+
+  update() {
+    if (this.mobileMode) return this.item.style.marginTop = 0;
+    this.item.style.marginTop = `-${this.halfHeight}px`;
   }
-  document.documentElement.style.setProperty(
-    "--section-height",
-    `${innerHeight - headerHeight}px`,
-  );
 }
+
+
+// slider 
+let swiper = new Swiper('.mySwiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+

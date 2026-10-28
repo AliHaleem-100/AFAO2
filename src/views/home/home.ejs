@@ -7,6 +7,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <%- include("../components/head.ejs") -%>
         <link rel="stylesheet" href="/styles/home/home.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 
 <body style="background:#e6e6e6">
@@ -31,8 +32,11 @@
                         essential skills, supportive services, and opportunities that help them overcome barriers and
                         move toward lasting economic self-sufficiency.</p>
                 </div>
-                <button class="btn outline-btn ">
-                    <a href="/programs">Programs</a>
+                <button>
+                    <a class="btn outline-btn" href="/programs">Programs</a>
+                </button>
+                <button class="apply-btn">
+                    <a class="btn outline-btn" href="/apply">Apply</a>
                 </button>
             </div>
         </section>
@@ -78,10 +82,38 @@
                         reducing poverty by empowering individuals in need, immigrant families, and low-income
                         households to achieve lasting economic self-sufficiency.</p>
                 </div>
+                <button>
+                    <a class="btn outline-btn about-btn" href="/about">see more
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </button>
             </div>
             <img src="/images/about.webp" alt="about image">
         </section>
-        <script src="/js/home/home.js"></script>
+
+        <!-- programs slider -->
+
+
+        <!-- <section class="swiper mySwiper ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </section> -->
+
+        <!-- <script type="module" src="/js/utils/containerRes.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+        <script type="module" src="/js/home/home.js"></script>
 </body>
 
 </html>
