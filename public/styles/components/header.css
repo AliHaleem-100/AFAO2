@@ -74,7 +74,7 @@ header {
   gap: 2px;
   padding: 9px 12px;
   border-radius: 7px;
-  color: var(--text-color);
+  color: var(--secondary-color);
   transition: var(--transition-duration);
 }
 
@@ -154,7 +154,7 @@ header {
   height: 100%;
   padding: 25px 10px;
   font-size: var(--text-font-size);
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 .nav-item:hover .dropdown {
@@ -174,7 +174,7 @@ header {
 
 .dropdown-link {
   display: block;
-  color: var(--text-color);
+  color: var(--secondary-color);
   padding: 7px;
   font-size: var(--text-font-size);
 }
@@ -359,7 +359,7 @@ header {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: var(--pale-dark-color);
+    background: var(--light-dark);
     display: block;
     z-index: -11111;
   }

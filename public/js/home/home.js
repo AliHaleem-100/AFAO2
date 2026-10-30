@@ -1,4 +1,3 @@
-import { containerRes } from "/js/utils/containerRes.js";
 const header = document.querySelector("header")
 
 // events
@@ -8,16 +7,14 @@ window.addEventListener("resize", update);
 function update() {
   hero.contentToCenter()
   trustBar.update();
-  // containerRes(header);
 }
-
 
 // hero section
 const hero = {
   heroContent: document.querySelector(".hero-content"),
 
   contentToCenter() {
-    if (trustBar.mobileMode) return this.heroContent.style.marginTop = `0`
+    if (trustBar.mobileMode) return this.heroContent.style.marginTop = 0;
     this.heroContent.style.marginTop = `-${trustBar.halfHeight}px`
   }
 }
@@ -25,7 +22,7 @@ const hero = {
 // trust bar 
 const trustBar = {
   item: document.querySelector(".trust-bar"),
-  get mobileMode() { return innerWidth <= 768 ? true : false },
+  get mobileMode() { return innerWidth <= 992 ? true : false },
 
   get halfHeight() { return this.item.clientHeight / 2 },
 

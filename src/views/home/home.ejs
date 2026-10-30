@@ -10,12 +10,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 
-<body style="background:#e6e6e6">
+<body>
+
     <%- include("../components/header.ejs") -%>
-
-
         <!-- hero section -->
-        <section class="hero-container">
+        <section class="hero-container section-pdd-block">
             <div class="background">
                 <picture>
                     <source media="(max-width:800px)" srcset="/images/800.webp" width="800">
@@ -35,6 +34,7 @@
                 <button>
                     <a class="btn outline-btn" href="/programs">Programs</a>
                 </button>
+                <!-- ? Apply button is for the mobile breakpoint -->
                 <button class="apply-btn">
                     <a class="btn outline-btn" href="/apply">Apply</a>
                 </button>
@@ -42,7 +42,6 @@
         </section>
 
         <!-- trust bar -->
-
         <section class="trust-bar">
             <div class="trust-container container">
                 <ul class="trust-menu">
@@ -73,7 +72,7 @@
         </section>
 
         <!-- about section -->
-        <section class="about-container container">
+        <section class="about-container container section-pdd-block">
             <div class="about-content">
                 <div class="content">
                     <h1 class="about-title title">About Us</h1>
@@ -83,7 +82,7 @@
                         households to achieve lasting economic self-sufficiency.</p>
                 </div>
                 <button>
-                    <a class="btn outline-btn about-btn" href="/about">see more
+                    <a class="btn outline-btn about-btn" href="/about">More
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </a>
                 </button>
@@ -91,28 +90,10 @@
             <img src="/images/about.webp" alt="about image">
         </section>
 
-        <!-- programs slider -->
-
-
-        <!-- <section class="swiper mySwiper ">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </section> -->
-
-        <!-- <script type="module" src="/js/utils/containerRes.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+        <!-- swiper -->
+       
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js">
+        </script>
         <script type="module" src="/js/home/home.js"></script>
 </body>
 
