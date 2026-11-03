@@ -149,6 +149,94 @@
   border-radius: var(--border-radius);
 }
 
+/* slider */
+.swiper-container {
+  width: 100%;
+  background: var(--light-primary-color);
+}
+
+.swiper-container .swiper-title {
+  font-size: var(--super-title-font-size);
+  margin-bottom: var(--title-margin-bottom);
+}
+
+.swiper-container .swiper {
+  position: relative;
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.slide-content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slide-content .content {
+  color: var(--secondary-color);
+  width: 50%;
+}
+
+.slide-title {
+  font-size: var(--title-font-size);
+  color: var(--primary-color);
+}
+
+.slide-subtitle {
+  font-size: var(--text-font-size);
+  line-height: var(--text-line-height);
+}
+
+.slide-content .slide-btn {
+  margin-top: var(--gap);
+}
+
+.slide-content img {
+  width: 550px;
+  height: 350px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+.slider-button-next,
+.slider-button-prev {
+  position: absolute;
+  top: 50%;
+  background: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: var(--white-color);
+  z-index: 11;
+  display: grid;
+  place-items: center;
+  font-size: var(--title-font-size);
+  cursor: pointer;
+}
+
+
+.slider-button-next {
+  right: 0;
+
+}
+
+.slider-button-prev {
+  left: 0;
+
+}
+
+.swiper-pagination {
+  position: static !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
+}
 
 @media only screen and (min-height: 1000px) {
   .hero-container {
@@ -156,7 +244,14 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+
+  /* slider */
+  .slide-content {
+
+    gap: var(--gap);
+  }
+}
 
 @media only screen and (max-width: 992px) {
 
@@ -193,13 +288,13 @@
   /* about */
   .about-container {
     flex-direction: column;
-    gap: var(--gap);
   }
 
   .about-container .about-content {
     width: 50%;
     height: 100%;
     padding-bottom: 20px;
+    line-height: var(--text-line-height);
   }
 
   .about-container img {
@@ -207,6 +302,21 @@
     width: 450px;
     height: 300px;
   }
+
+  /* slider */
+  .slide-content {
+    flex-direction: column;
+    padding: var(--gap);
+  }
+
+  .slide-content .content {
+    width: 100%;
+  }
+
+  .slide-content img {
+    width: 100%;
+  }
+
 }
 
 /* Tablets portrait */
@@ -259,6 +369,17 @@
   .about-container button .about-btn {
     text-align: center;
     display: block;
+  }
+
+  /* slider */
+  .slide-content {
+    padding: 0;
+
+  }
+
+
+  .slide-content .slide-btn {
+    width: 100%;
   }
 }
 
