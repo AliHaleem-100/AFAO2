@@ -193,6 +193,7 @@
 
 .slide-content .slide-btn {
   margin-top: var(--gap);
+  display: inline-block;
 }
 
 .slide-content img {

@@ -1,13 +1,18 @@
 const Controller = require("../../controllers/controller.js");
-
+const PROGRAMS_MODEL = require("../programs/program.model.js")
 class homeController extends Controller {
   constructor() {
     super();
   }
 
-  home(req, res, next) {
+  async home(req, res, next) {
     try {
-      res.render("home/home");
+      let programList = await PROGRAMS_MODEL.find({});
+
+
+      res.render("home/home", {
+        programList,
+      });
     } catch (error) {
       next(error);
     }

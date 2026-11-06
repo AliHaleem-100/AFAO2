@@ -95,136 +95,34 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="slide-content">
-                            <div class="content">
-                                <h3 class="slide-title title">
-                                    Workforce Development
-                                </h3>
-                                <p class="slide-subtitle">
-                                    AFAO's DMV Access and Assistance Program provides general guidance and educational
-                                    support to help participants better understand California DMV processes, prepare for
-                                    available services, and navigate requirements with greater confidence.
+                    <% programList.forEach((program)=>{ %>
 
-                                </p>
-                                <button class="btn outline-btn slide-btn">More
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <div class="content">
+                                    <h3 class="slide-title title">
+                                        <%=program.title%>
+                                    </h3>
+                                    <p class="slide-subtitle">
+                                        <%=program.summary%>
+
+                                    </p>
+                                    <a href="<%=program.link%>" class="btn outline-btn slide-btn">More
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+
+                                <picture>
+                                    <source media="(max-width:800px)"
+                                        srcset="/images/slides/<%=program.imageSlug%>-800.webp">
+                                    <img src="/images/slides/<%=program.imageSlug%>-1920.webp"
+                                        srcset="/images/slides/<%=program.imageSlug%>-1920.webp 1920w, /images/slides/<%=program.imageSlug%>-1280.webp 1280w"
+                                        alt="" loading="lazy">
+                                </picture>
                             </div>
-
-                            <picture>
-                                <source media="(max-width:800px)" srcset="/images/slides/wfd-800.webp">
-                                <img src="/images/slides/wfd-1920.webp"
-                                    srcset="/images/slides/wfd-1920.webp 1920w, /images/slides/wfd-1280.webp 1280w"
-                                    alt="" loading="lazy">
-                            </picture>
                         </div>
 
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-content">
-                            <div class="content">
-                                <h3 class="slide-title title">
-                                    Workforce Development
-                                </h3>
-                                <p class="slide-subtitle">
-                                    AFAO's DMV Access and Assistance Program provides general guidance and educational
-                                    support to help participants better understand California DMV processes, prepare for
-                                    available services, and navigate requirements with greater confidence.
-
-                                </p>
-                                <button class="btn outline-btn slide-btn">More
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
-
-                            <picture>
-                                <source media="(max-width:800px)" srcset="/images/slides/wfd-800.webp">
-                                <img src="/images/slides/wfd-1920.webp"
-                                    srcset="/images/slides/wfd-1920.webp 1920w, /images/slides/wfd-1280.webp 1280w"
-                                    alt="">
-                            </picture>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-content">
-                            <div class="content">
-                                <h3 class="slide-title title">
-                                    Workforce Development
-                                </h3>
-                                <p class="slide-subtitle">
-                                    AFAO's DMV Access and Assistance Program provides general guidance and educational
-                                    support to help participants better understand California DMV processes, prepare for
-                                    available services, and navigate requirements with greater confidence.
-
-                                </p>
-                                <button class="btn outline-btn slide-btn">More
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
-
-                            <picture>
-                                <source media="(max-width:800px)" srcset="/images/slides/wfd-800.webp">
-                                <img src="/images/slides/wfd-1920.webp"
-                                    srcset="/images/slides/wfd-1920.webp 1920w, /images/slides/wfd-1280.webp 1280w"
-                                    alt="">
-                            </picture>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-content">
-                            <div class="content">
-                                <h3 class="slide-title title">
-                                    Workforce Development
-                                </h3>
-                                <p class="slide-subtitle">
-                                    AFAO's DMV Access and Assistance Program provides general guidance and educational
-                                    support to help participants better understand California DMV processes, prepare for
-                                    available services, and navigate requirements with greater confidence.
-
-                                </p>
-                                <button class="btn outline-btn slide-btn">More
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
-
-                            <picture>
-                                <source media="(max-width:800px)" srcset="/images/slides/wfd-800.webp">
-                                <img src="/images/slides/wfd-1920.webp"
-                                    srcset="/images/slides/wfd-1920.webp 1920w, /images/slides/wfd-1280.webp 1280w"
-                                    alt="">
-                            </picture>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-content">
-                            <div class="content">
-                                <h3 class="slide-title title">
-                                    Workforce Development
-                                </h3>
-                                <p class="slide-subtitle">
-                                    AFAO's DMV Access and Assistance Program provides general guidance and educational
-                                    support to help participants better understand California DMV processes, prepare for
-                                    available services, and navigate requirements with greater confidence.
-
-                                </p>
-                                <button class="btn outline-btn slide-btn">More
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
-
-                            <picture>
-                                <source media="(max-width:800px)" srcset="/images/slides/wfd-800.webp">
-                                <img src="/images/slides/wfd-1920.webp"
-                                    srcset="/images/slides/wfd-1920.webp 1920w, /images/slides/wfd-1280.webp 1280w"
-                                    alt="" loading="lazy">
-                            </picture>
-                        </div>
-
-                    </div>
+                        <% }) %>
 
                 </div>
                 <div class="slider-button-next">

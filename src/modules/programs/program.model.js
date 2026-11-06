@@ -28,6 +28,10 @@ const PROGRAM_SCHEMA = new MONGOOSE.Schema({
         type: Boolean,
         required: true,
         default: true
+    },
+    link: {
+        type: String,
+        required: true
     }
 },
     {

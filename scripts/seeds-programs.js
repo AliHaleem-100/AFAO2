@@ -1,5 +1,5 @@
 const MONGOOSE = require("mongoose");
-const PROGRAMS = require("../src/modules/programs/program.model");
+const PROGRAMS_MODEL = require("../src/modules/programs/program.model");
 require("dotenv").config();
 
 const ENV = require("../src/config/env");
@@ -14,7 +14,7 @@ const programsData = [
 
 AFAO's English Learning Program helps participants strengthen practical English skills that support everyday communication, workplace readiness, and greater confidence. By improving language proficiency, participants are better prepared to pursue new opportunities, increase their independence, and build lasting economic self-sufficiency.`,
         imageSlug: "eng",
-
+        link: "/programs/eng"
     },
     {
         title: "Workforce Development",
@@ -23,13 +23,17 @@ AFAO's English Learning Program helps participants strengthen practical English 
 
 AFAO's Workforce Development Program equips participants with practical career readiness skills, professional guidance, and workforce preparation that support successful employment. By strengthening employability and expanding access to career opportunities, the program helps participants move toward lasting economic self-sufficiency and stronger futures.`,
         imageSlug: "wfd",
-    }, {
+        link: "/programs/workforce_dev"
+    },
+    {
         title: "Financial Literacy",
         summary: "AFAO's Financial Literacy Program provides practical financial education that helps participants strengthen their financial capability, make informed financial decisions, and build healthy financial habits.",
         detail: `Financial knowledge empowers individuals and families to make informed decisions, manage resources responsibly, and build long-term economic stability. Understanding how to navigate everyday financial decisions is an essential step toward lasting economic self-sufficiency.
 
 AFAO's Financial Literacy Program provides practical financial education that helps participants strengthen their financial capability, make informed financial decisions, and build healthy financial habits. By improving financial confidence and expanding financial knowledge, the program supports greater independence, long-term stability, and stronger futures.`,
         imageSlug: "fl",
+        link: "/programs/financial_literacy"
+
     },
     {
         title: "DMV Access and Assistance",
@@ -38,6 +42,8 @@ AFAO's Financial Literacy Program provides practical financial education that he
 
 AFAO's DMV Access and Assistance Program provides general guidance and educational support to help participants better understand California DMV processes, prepare for available services, and navigate requirements with greater confidence. By improving access to essential public services, the program helps reduce barriers, expand opportunity, and support lasting economic self-sufficiency.`,
         imageSlug: "dmv",
+        link: "/programs/dmv"
+
     },
     {
         title: "Employer Referral and Job Support",
@@ -46,6 +52,7 @@ AFAO's DMV Access and Assistance Program provides general guidance and education
 
 AFAO's Employer Referral and Job Support Program helps participants strengthen their connection to employment opportunities by providing employment referrals, job search guidance, and ongoing support throughout their employment journey. Through collaboration with employers and community partners, the program helps participants move closer to meaningful employment, greater financial stability, and a more independent future.`,
         imageSlug: "ref",
+        link: "/programs/referral"
     }
 
 
@@ -53,8 +60,8 @@ AFAO's Employer Referral and Job Support Program helps participants strengthen t
 async function seed() {
     try {
         await MONGOOSE.connect(ENV.MONGO_DB_URI)
-        await PROGRAMS.deleteMany({});          // start clean each run
-        await PROGRAMS.insertMany(programsData);
+        await PROGRAMS_MODEL.deleteMany({});          // start clean each run
+        await PROGRAMS_MODEL.insertMany(programsData);
         console.log("Save")
     }
     catch (err) {
