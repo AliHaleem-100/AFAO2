@@ -6,7 +6,7 @@ const PATH = require("path");
 const ENV_NODE = require("./src/config/env").ENV_NODE;
 
 
-require("./data/database")()
+require("./src/config/database")()
 
 APP.use(EXPRESS.json());
 APP.use(EXPRESS.urlencoded({ extended: false }));

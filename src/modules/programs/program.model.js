@@ -1,5 +1,5 @@
 const MONGOOSE = require("mongoose");
-const PROGRAM_SCHEMA = MONGOOSE.Schema({
+const PROGRAM_SCHEMA = new MONGOOSE.Schema({
     title: {
         type: String,
         required: true,
@@ -8,7 +8,7 @@ const PROGRAM_SCHEMA = MONGOOSE.Schema({
         trim: true,
     },
 
-    imageURL: {
+    imageSlug: {
         type: String,
         default: "",
     },
@@ -20,7 +20,7 @@ const PROGRAM_SCHEMA = MONGOOSE.Schema({
     },
 
     detail: {
-        type: string,
+        type: String,
         required: true
     },
 
@@ -34,6 +34,6 @@ const PROGRAM_SCHEMA = MONGOOSE.Schema({
         timestamp: true
     })
 
-module.exports = MONGOOSE.model("Programs", PROGRAM_SCHEMA)
+module.exports = MONGOOSE.model("Program", PROGRAM_SCHEMA)
 
 
