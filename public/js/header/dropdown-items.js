@@ -37,23 +37,23 @@ const DROPDOWN_ITEMS = {
   programs: [
     {
       item: "English Learning",
-      link: "/about/english_learning",
+      link: "/programs/english_learning",
     },
     {
       item: "Workforce Development",
-      link: "/about/workforce_development",
+      link: "/programs/workforce_development",
     },
     {
       item: "Financial Literacy",
-      link: "/about/financial_literacy",
+      link: "/programs/financial_literacy",
     },
     {
       item: "DMV Access & Assistance",
-      link: "/about/dmv_access_and_assistance",
+      link: "/programs/dmv_access_and_assistance",
     },
     {
       item: "Employer Referral & Job Support",
-      link: "/about/employer_ref_and_job_support",
+      link: "/programs/employer_ref_and_job_support",
     },
   ],
   volunteer: [
