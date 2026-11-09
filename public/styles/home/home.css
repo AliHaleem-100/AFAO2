@@ -36,6 +36,7 @@
 .hero-content {
   width: 65%;
   text-align: center;
+  max-width: 1400px;
 }
 
 .hero-content .content {
@@ -72,7 +73,6 @@
 /* trust bar */
 .trust-bar {
   width: 100%;
-  margin: 0 auto;
 }
 
 .trust-container {
@@ -81,6 +81,7 @@
   background: var(--white-color);
   border-radius: var(--border-radius);
   box-shadow: 1px 1px 10px var(--light-dark);
+   max-width: 1400px;
 }
 
 .trust-container .trust-menu {
@@ -128,7 +129,9 @@
 .about-container {
   display: flex;
   gap: var(--gap);
+  max-width: 1400px;
 }
+
 
 .about-content .content {
   margin-bottom: var(--gap);
@@ -155,6 +158,10 @@
   background: var(--light-primary-color);
 }
 
+.swiper-container.container{
+  
+}
+
 .swiper-container .swiper-title {
   font-size: var(--super-title-font-size);
   margin-bottom: var(--title-margin-bottom);
@@ -172,7 +179,8 @@
   display: flex;
   justify-content: space-between;
   height: 100%;
-  width: 90%;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -182,8 +190,9 @@
 }
 
 .slide-title {
-  font-size: var(--title-font-size);
-  color: var(--primary-color);
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-bottom: var(--title-margin-bottom);
 }
 
 .slide-subtitle {
@@ -193,6 +202,7 @@
 
 .slide-content .slide-btn {
   margin-top: var(--gap);
+  text-align: center;
   display: inline-block;
 }
 
@@ -207,27 +217,29 @@
 .slider-button-prev {
   position: absolute;
   top: 50%;
-  background: var(--primary-color);
-  width: 50px;
-  height: 50px;
+  transform: translateY(-50%);
+  background: var(--white-color);
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   font-size: 10px;
-  color: var(--white-color);
+  color: var(--primary-color);
   z-index: 11;
   display: grid;
   place-items: center;
   font-size: var(--title-font-size);
   cursor: pointer;
+  box-shadow: 0px 1px 5px var(--light-dark);
 }
 
 
 .slider-button-next {
-  right: 0;
+  right: 6px;
 
 }
 
 .slider-button-prev {
-  left: 0;
+  left: 6px;
 
 }
 
@@ -237,6 +249,99 @@
 
 .swiper-pagination-bullet-active {
   background: var(--primary-color) !important;
+}
+
+
+/* ways to help */
+.wth-section {
+  padding-block: var(--section-padding);
+  max-width: 1400px;
+}
+
+.wth-section header {
+  z-index: 0;
+  margin-bottom: var(--title-margin-bottom);
+
+}
+
+.wth-section header .title {
+  font-size: var(--super-title-font-size);
+  font-weight: var(--super-title-font-weight);
+  color: var(--secondary-color);
+
+}
+
+.wth-section header .subtitle {}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+
+}
+
+.box {
+  position: relative;
+  width: 50%;
+  box-shadow: 1px 1px 50px var(--light-dark);
+  border-radius: var(--border-radius);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 1px 1px 50px var(--light-hoover-dark);
+
+}
+
+.box img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -11;
+}
+
+.box .content {
+  width: 60%;
+  height: 100%;
+  padding: var(--gap);
+
+}
+
+.box .content .header {
+  display: inline-block;
+
+}
+
+.box .content .header i {
+  font-size: x-large;
+  display: block;
+  border: 2px solid var(--semi-light-primary-color);
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--gap) / 2.5);
+}
+
+.box .content .header .title {
+  font-size: var(--title-font-size);
+  color: var(--primary-color);
+}
+
+.box .content p {
+  line-height: var(--text-line-height);
+  color: var(--secondary-color);
+  margin-bottom: calc(var(--gap) / 2.5);
+}
+
+.box .content .btn {
+  display: inline-block;
 }
 
 @media only screen and (min-height: 1000px) {
@@ -318,6 +423,14 @@
     width: 100%;
   }
 
+  /* boxes */
+  .boxes {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 100%;
+  }
 }
 
 /* Tablets portrait */
@@ -360,8 +473,6 @@
     width: 100%;
   }
 
-  /* trust bar */
-
   /* about */
   .about-content button {
     width: 100%;
@@ -381,6 +492,27 @@
 
   .slide-content .slide-btn {
     width: 100%;
+  }
+
+  /* wth */
+  .box:after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    background: var(--white-color);
+    opacity: 0.7;
+  }
+
+  .box .content {
+    width: 100%;
+  }
+
+  .box .content .btn {
+    padding-block: 15px;
+    width: 100%;
+    text-align: center;
+
   }
 }
 

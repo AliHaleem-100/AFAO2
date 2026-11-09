@@ -90,14 +90,14 @@
         </section>
 
         <!-- swiper -->
-        <section class="swiper-container container section-pdd-block">
-            <h1 class="swiper-title title">Programs</h1>
-            <div class="swiper mySwiper">
+        <section class="swiper-container  section-pdd-block">
+            <!-- <h1 class="swiper-title title">Programs</h1> -->
+            <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
 
                     <% programList.forEach((program)=>{ %>
 
-                        <div class="swiper-slide">
+                        <div class="swiper-slide container">
                             <div class="slide-content">
                                 <div class="content">
                                     <h3 class="slide-title title">
@@ -136,8 +136,39 @@
         </section>
 
         <!-- ways to help -->
-        <section class="wth-section">
+        <section class="wth-section container">
+            <header>
+                <h1 class="title">Ways to Help</h1>
+                <span class="subtitle">Join us in creating opportunities and strengthening communities.</span>
+            </header>
+            <div class="boxes">
+                <!-- donate -->
+                <div class="donate box">
+                    <img src="/images/donate.webp" width="600" alt="donate" loading="lazy">
+                    <div class="content">
+                        <header class="header">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            <h3 class="title">Donate</h3>
+                        </header>
+                        <p>Your contribution helps us provide education, resources, and support to individuals and
+                            families in need.</p>
+                        <a href="/donate" class="btn outline-btn donate-box-btn">Donate Now</a>
+                    </div>
+                </div>
 
+                <!-- Volunteer -->
+                <div class="volunteer box">
+                    <img src="/images/volunteer.webp" width="600" alt="donate" loading="lazy">
+                    <div class="content">
+                        <header class="header">
+                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                            <h3 class="title">Volunteer</h3>
+                        </header>
+                        <p>Share your time and skills to support programs, events, and community initiatives.</p>
+                        <a href="/volunteer" class="btn outline-btn volunteer-box-btn">Join Us</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js">
         </script>

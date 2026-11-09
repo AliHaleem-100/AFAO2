@@ -9,9 +9,16 @@ header {
   z-index: 111;
 }
 
+.bg-container:first-of-type {
+  background: var(--secondary-color);
+}
+
+.bg-container {
+  background: var(--white-color);
+}
+
 /* top bar */
 .top-bar {
-  background: var(--secondary-color);
   display: flex;
   align-items: center;
   color: var(--white-color);
@@ -122,7 +129,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--white-color);
   padding-block: 0;
 }
 
